@@ -45,6 +45,14 @@ export default class AlignItemsBasics extends Component  {
   }
 
   loginUser = (email,password) =>{
+    try {
+      
+      
+      firebase.auth().signInWithEmailAndPassword(email, password)
+    } catch (error) {
+      console.log(error.toString())
+    }
+
     
   }
 
